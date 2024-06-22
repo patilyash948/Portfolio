@@ -1,3 +1,8 @@
+Certainly! Let's apply the same styling for the email, LinkedIn, GitHub links, and phone number to make them look like buttons.
+
+Here’s the updated HTML and CSS:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +42,6 @@
         h1 {
             color: #4CAF50;
         }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
         h2 {
             color: #333;
         }
@@ -72,6 +73,9 @@
             text-align: center;
             margin-bottom: 2rem;
         }
+        .contact p {
+            margin: 0.5rem 0;
+        }
         .contact a {
             color: #4CAF50;
             text-decoration: none;
@@ -79,6 +83,8 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
+            display: inline-block;
+            margin: 0.5rem 0;
         }
         .contact a:hover {
             background: #4CAF50;
@@ -89,13 +95,16 @@
 <body>
     <header>
         <h1>Yash Anil Patil</h1>
-        <img src="photo.jpg" alt="Yash Patil" class="profile-photo">
+        <img src="Photo.jpg" alt="Yash Patil" class="profile-photo">
         <p>EE Final Year Undergraduate (2024 Batch), Pune Maharashtra, India</p>
     </header>
     <div class="container">
         <div class="section contact">
-            <p>Phone: +919637587224, +917020447482 | Email: <a href="mailto:yashpatil7224@gmail.com">yashpatil7224@gmail.com</a></p>
-            <p><a href="https://www.linkedin.com/in/patilyash948">LinkedIn</a> | <a href="https://github.com/patilyash948">GitHub</a></p>
+            <p><a href="tel:+919637587224">+919637587224</a></p>
+            <p><a href="tel:+917020447482">+917020447482</a></p>
+            <p><a href="mailto:yashpatil7224@gmail.com">yashpatil7224@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/patilyash948">LinkedIn</a></p>
+            <p><a href="https://github.com/patilyash948">GitHub</a></p>
         </div>
         <div class="section">
             <h2>Career Objective</h2>
@@ -141,3 +150,6 @@
     </div>
 </body>
 </html>
+```
+
+This code adds a uniform style to your phone numbers, email, LinkedIn, and GitHub links, making them look like buttons. Each link is now styled with a border, padding, and hover effect to improve the visual appeal and consistency of your contact information.
