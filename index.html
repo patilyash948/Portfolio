@@ -108,20 +108,29 @@
             color: #fff;
         }
         .connect-button {
-            background-color: #E67E22;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    background-color: #E67E22;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    position: absolute;
+    bottom: 1rem; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .connect-button {
+        padding: 0.8rem 1.6rem; /* Adjusted padding */
+        font-size: 1rem; /* Adjusted font size */
+        bottom: 2rem; /* Adjusted position */
+    }
+}
+
         .connect-button:hover {
             background-color: #D35400;
         }
