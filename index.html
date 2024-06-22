@@ -15,12 +15,12 @@
             color: #333;
         }
         header {
-            background: url('header-bg.png') no-repeat center center/cover;
+            background: url('header-bg.jpg') no-repeat center center/cover;
             color: #fff;
             padding: 2rem 0;
             text-align: center;
             position: relative;
-            height: 460px;
+            height: 500px;
         }
         .container {
             width: 80%;
@@ -67,11 +67,7 @@
             padding: 0.5rem;
             border-radius: 5px;
         }
-        .contact {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .contact a, .info-box {
+        .info-box {
             color: #E67E22;
             text-decoration: none;
             border: 1px solid #E67E22;
@@ -81,12 +77,108 @@
             display: inline-block;
             margin: 0.2rem;
         }
-        .contact a:hover, .info-box:hover {
+        .info-box:hover {
             background: #E67E22;
             color: #fff;
         }
         .career-objective p {
             text-align: justify;
+        }
+        .contact-section {
+            background: #fff;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section p, .contact-section a {
+            margin: 0.5rem 0;
+        }
+        .contact-section a {
+            color: #E67E22;
+            text-decoration: none;
+            border: 1px solid #E67E22;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            display: inline-block;
+        }
+        .contact-section a:hover {
+            background: #E67E22;
+            color: #fff;
+        }
+        .connect-button {
+            background-color: #E67E22;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .connect-button:hover {
+            background-color: #D35400;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal form {
+            display: flex;
+            flex-direction: column;
+        }
+        .modal form input, .modal form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .modal form button {
+            padding: 0.5rem;
+            background-color: #E67E22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .modal form button:hover {
+            background-color: #D35400;
         }
     </style>
 </head>
@@ -98,12 +190,13 @@
             EE Final Year Undergraduate (2024 Batch), Pune Maharashtra, India
         </div>
         <div class="contact">
-            <a href="tel:+919637587224">+919637587224</a> 
-            <a href="tel:+917020447482">+917020447482</a>
-            <a href="mailto:patilyash948@gmail.com">patilyash948@gmail.com</a>
-            <a href="https://www.linkedin.com/in/patilyash948">LinkedIn</a>
-            <a href="https://github.com/patilyash948">GitHub</a>
+            <a href="tel:+919637587224" class="info-box">+919637587224</a> 
+            <a href="tel:+917020447482" class="info-box">+917020447482</a>
+            <a href="mailto:patilyash948@gmail.com" class="info-box">patilyash948@gmail.com</a>
+            <a href="https://www.linkedin.com/in/patilyash948" class="info-box">LinkedIn</a>
+            <a href="https://github.com/patilyash948" class="info-box">GitHub</a>
         </div>
+        <button class="connect-button" id="connectBtn">Connect</button>
     </header>
     <div class="container">
         <div class="section career-objective">
@@ -134,7 +227,9 @@
                 <li>Technology</li>
                 <li>Software Development</li>
                 <li>Problem Solving</li>
-                <li>IoT</li>
+                <li>
+
+IoT</li>
                 <li>Machine Learning</li>
                 <li>Python</li>
             </ul>
@@ -147,6 +242,62 @@
                 <li><strong>MAHARASHTRA STATE BOARD OF SECONDARY EDUCATION</strong> - 10th Std (2017-18), Percentage: 82.40%</li>
             </ul>
         </div>
+        <div class="section contact-section">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email or through my social media profiles.</p>
+            <p><a href="tel:+919637587224">+919637587224</a></p>
+            <p><a href="tel:+917020447482">+917020447482</a></p>
+            <p><a href="mailto:patilyash948@gmail.com">patilyash948@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/patilyash948">LinkedIn</a></p>
+            <p><a href="https://github.com/patilyash948">GitHub</a></p>
+        </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("connectBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
